@@ -49,17 +49,19 @@ class Server:
         data = []
         data_size = 0
         start = index if index else 0
+        idx = None
 
         while data_size < page_size and start < dataset_size:
             if start in dataset:
+                if idx is None:
+                    idx = start
                 data.append(dataset[start])
                 data_size += 1
             start += 1
-
         next_index = start if start < dataset_size else None
         
         return {
-            "index": index,
+            "index": idx,
             "data": data,
             "page_size": len(data),
             "next_index": next_index
