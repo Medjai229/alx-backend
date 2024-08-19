@@ -64,7 +64,7 @@ class Server:
         next_index = start if start < dataset_size else None
 
         return {
-            "index": index,
+            "index": idx,
             "data": data,
             "page_size": len(data),
             "next_index": next_index
