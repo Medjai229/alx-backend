@@ -42,6 +42,9 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+        """
+        Retrieves a hypermedia index based on the provided index and page size.
+        """
         dataset = self.indexed_dataset()
         dataset_size = len(dataset)
         assert type(index) is int and 0 < index < dataset_size
@@ -59,11 +62,10 @@ class Server:
                 data_size += 1
             start += 1
         next_index = start if start < dataset_size else None
-        
+
         return {
-            "index": idx,
+            "index": index,
             "data": data,
             "page_size": len(data),
             "next_index": next_index
         }
-        
