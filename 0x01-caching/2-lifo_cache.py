@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+2-lifo_cache.py
+
+This module implements a basic LIFO caching system.
+
+Author: Malik Hussein
+"""
 from base_caching import BaseCaching
 
 
