@@ -10,6 +10,9 @@ from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
+    """
+    Basic Caching class
+    """
     def __init__(self):
         """
         Initialize
