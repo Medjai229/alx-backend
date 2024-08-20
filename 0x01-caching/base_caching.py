@@ -3,6 +3,7 @@
 BaseCaching module
 """
 
+
 class BaseCaching():
     """
     BaseCaching defines:
@@ -13,7 +14,7 @@ class BaseCaching():
 
     def __init__(self):
         """
-        Initiliaze
+        Initialize
         """
         self.cache_data = {}
 
