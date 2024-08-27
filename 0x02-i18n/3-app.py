@@ -35,6 +35,7 @@ def get_locale():
     """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
+
 # That code was written for flask-babel=2.0.0
 # If you wanna use it for flask-babel=4.0.0
 # Comment the decorator and uncomment the following line
