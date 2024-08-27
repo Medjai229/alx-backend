@@ -28,7 +28,7 @@ app.config.from_object(Config)
 
 
 @babel.localeselector
-def get_locale():
+def get_locale() -> str:
     """
     Return the best match for language based on the
     Accept-Language HTTP header sent by the client.
@@ -43,7 +43,7 @@ def get_locale():
 
 
 @app.route('/', strict_slashes=False)
-def index():
+def index() -> str:
     """
     Route for the homepage
 
