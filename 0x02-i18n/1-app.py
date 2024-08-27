@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-File: 0-app.py
+File: 1-app.py
 
 A simple flask app with babel extension
 
@@ -33,9 +33,9 @@ def index():
     Route for the homepage
 
     This route is configured to the '/' URL.
-    It returns the rendered '0-index.html' template.
+    It returns the rendered '1-index.html' template.
     """
-    return render_template('0-index.html')
+    return render_template('1-index.html')
 
 
 if __name__ == "__main__":
