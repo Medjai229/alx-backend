@@ -63,6 +63,10 @@ def index():
 
 
 def get_user():
+    """
+    Retrieves a user from the users dictionary based on the 'login_as'
+    query parameter. If the parameter is not present, returns None.
+    """
     user_id = request.args.get('login_as')
     if user_id is None:
         return None
@@ -71,6 +75,12 @@ def get_user():
 
 @app.before_request
 def before_request():
+    """
+    Before each request, this function gets the user from the users dictionary
+    based on the 'login_as' query parameter, and assigns it to the 'g.user'
+    variable.
+    If the 'login_as' query parameter is not present, 'g.user' is set to None.
+    """
     user = get_user()
     g.user = user
 
