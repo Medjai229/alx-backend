@@ -61,16 +61,19 @@ def index():
     """
     return render_template('5-index.html')
 
+
 def get_user():
     user_id = request.args.get('login_as')
     if user_id is None:
         return None
     return users.get(int(user_id))
 
+
 @app.before_request
 def before_request():
     user = get_user()
     g.user = user
+
 
 if __name__ == "__main__":
     app.run()
