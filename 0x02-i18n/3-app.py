@@ -42,7 +42,7 @@ def get_locale():
 # babel = Babel(app, locale_selector=get_locale)
 
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def index():
     """
     Route for the homepage
