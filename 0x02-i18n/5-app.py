@@ -33,7 +33,7 @@ class Config:
 app.config.from_object(Config)
 
 
-# @babel.localeselector
+@babel.localeselector
 def get_locale():
     """
     Return the best match for language based on the
@@ -48,7 +48,7 @@ def get_locale():
 # That code was written for flask-babel=2.0.0
 # If you wanna use it for flask-babel=4.0.0
 # Comment the decorator and uncomment the following line
-babel = Babel(app, locale_selector=get_locale)
+# babel = Babel(app, locale_selector=get_locale)
 
 
 @app.route('/', strict_slashes=False)
