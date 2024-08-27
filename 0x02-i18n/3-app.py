@@ -21,7 +21,7 @@ class Config:
 
 
 app = Flask(__name__)
-app.config.from_object(Config)
+app.config.from_object(Config())
 babel = Babel(app)
 
 
@@ -52,4 +52,4 @@ def index() -> str:
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
