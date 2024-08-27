@@ -27,11 +27,14 @@ app.config.from_object(Config)
 
 
 def get_locale():
+    """
+    Return the best match for language based on the
+    Accept-Language HTTP header sent by the client.
+    """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
+
 babel = Babel(app, locale_selector=get_locale)
-
-
 
 
 @app.route('/')
